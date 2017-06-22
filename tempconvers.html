@@ -1,0 +1,106 @@
+<!DOCTYPE: HTML>
+<html lang="en-us">
+    <head>
+                <title>JavaScript Unit Calculator</title>
+        
+        <!-----------------Browser and mobile compatible--------------->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--------------------SEO and Descriptions------------------->
+        <meta name="description" content="# tydyedesign.github.io
+                This is for learning HTML5, CSS3, and JavaScript; to demonstrate personal skill in JavaScript and provide easy ways to calculate.
+                Brigham Young University-Idaho, BYU-Idaho, CIT230, CIT 230, CIT160">
+        <meta name="keywords" content="BYUI, CIT230, CIT, frontend web development, tyler tucker, tydye design, javascript calculator, github, unit converter, unit calculator">
+        <meta name="author" content="Tyler Tucker, TyDyeDesign">
+        
+        <!---------------------Mobile App Tags----------------------->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <link rel="apple-touch-startup-image" href="calculatoricon.png" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="calculatoricon.png">
+        <link rel="apple-touch-icon" href="calculatoricon.png" />
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!---------------Stylesheets, CDNs, Script Tags--------------->
+        
+        <link rel="stylesheet" href="main.css">
+        
+        <script type="text/javascript" src="tempjs.js"></script>
+        
+    </head>
+    <body>
+        <div class="pagecontainer">
+            <div class="card-8">
+        <p id="backbtn">
+            <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
+        </p>
+            <h1>Temperature</h1>
+        <header>
+            <hr>
+        </header>
+                <center>
+            <div class="conversionbox">
+                <p>
+                <h2>Fahrenheit to Celsius</h2>
+                <span class="highlight"> Celsius = (5 / 9) * (farenheit - 32) </span>
+<br>
+<br>
+Enter a temperature in Fahrenheit: <input type="text" id="fahrenInputBox">
+<button type="button" onclick="fahrToCels()">Convert</button>
+<div id="celsiusDiv"></div>
+                </p>
+            </div>
+   
+            <div class="conversionbox">
+                <p>
+                <h2>Celsius to Fahrenheit</h2>
+                <span class="highlight"> Fahrenheit = (Celsius * 1.8) + 32 </span>
+<br>
+<br>
+Enter a temperature in Celsius: <input type="text" id="celsiusInputBox">
+<button type="button" onclick="celsToFahr()">Convert</button>
+<div id="fahrDiv"></div>
+                </p>
+            </div>
+                    
+            <div class="conversionbox">
+                <p>
+                <h2>Fahrenheit to Kelvin</h2>
+                <span class="highlight"> Kelvin = ((5/9) * (Fahrenheit - 32)) + 273 </span>
+<br>
+<br>
+Enter a temperature in Fahrenheit: <input type="text" id="fahrInputBox">
+<button type="button" onclick="fahrToKelv()">Convert</button>
+<div id="kelvinDiv"></div>
+                 </p>
+            </div>
+        
+            <div class="conversionbox">
+                <p>
+                <h2>Celsius to Kelvin</h2>
+                <span class="highlight"> Kelvin = Celsius + 273.15 </span>
+<br>
+<br>
+Enter a temperature in Celsius: <input type="text" id="celsInputBox">
+<button type="button" onclick="celsToKelv()">Convert</button>
+<div id="kelvinDiv2"></div>
+                 </p>
+            </div>
+                </center>
+            
+            </div>
+        </div>
+    </body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript" src="jquery-3.2.0.min.js"> </script>
+        
+        <script type="text/javascript" src="unitnavbar.js"> </script>
+        <script type="text/javascript" src="unitfooter.js"> </script>
+</html>

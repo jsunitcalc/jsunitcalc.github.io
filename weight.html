@@ -52,7 +52,9 @@
             <hr>
     </header>
                 
-            <div id="conversionbox" ng-app="poundstokgApp" ng-controller="myCtrl">
+        <main ng-app="poundstokgApp" ng-controller="myCtrl">
+                
+            <div id="conversionbox">
             
                 <h2>Pounds to Kilograms</h2>
                 <span class="highlight">{{ equation }}</span>
@@ -73,6 +75,29 @@
                 Kg to Pounds: <h3>{{kilograms * 2.20462 | number:2}}</h3>
                 
             </div>
+                
+            <div id="conversionbox">
+            
+                <h2>Ounces to Grams</h2>
+                <span class="highlight">{{ equation }}</span>
+                <br>
+                <span class="highlight">{{ equation2 }}</span>
+<br>
+<br>
+                Enter a weight in ounces or grams:
+                <br>
+                <br>
+                
+                Ounces: <input type="text" ng-model="ounces"><br>
+                Grams: <input type="text" ng-model="grams"><br>
+
+                <br>
+                Ounces to Grams: <h3>{{ounces * 28.3495 | number:2}}</h3>
+                <br>
+                Grams to Ounces: <h3>{{grams * 0.035274 | number:2}}</h3>
+                
+            </div>
+        </main>
 
             </div>
         </div>
@@ -85,6 +110,11 @@ app.controller('myCtrl', function($scope) {
     $scope.kilograms= "";
     $scope.equation= "1 lb = 0.453592 kg";
     $scope.equation2= "1 kg = 2.20462 lb";
+    
+    $scope.ounces= "";
+    $scope.grams= "";
+    $scope.ounceequation= "1 oz = 28.3495 grams";
+    $scope.gramequation= "1 gram = 0.035274 oz";
 });
 </script>
 

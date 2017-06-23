@@ -36,67 +36,67 @@
         
         <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
         
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
     </head>
     <body>
         <div class="pagecontainer">
             <div class="card-8">
+    <header class="w3-container w3-red">
         <p id="backbtn">
             <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
         </p>
             <h1>Temperature <i class="fa fa-thermometer"></i></h1>
-        <header>
             <hr>
-        </header>
-                <center>
-            <div class="conversionbox">
+    </header>
+            <div id="conversionbox" class="w3-container w3-">
                 <p>
                 <h2>Fahrenheit to Celsius</h2>
                 <span class="highlight"> Celsius = (5 / 9) * (farenheit - 32) </span>
 <br>
 <br>
 Enter a temperature in Fahrenheit: <input type="text" id="fahrenInputBox">
-<button type="button" onclick="fahrToCels()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="fahrToCels()">Convert</button>
 <div id="celsiusDiv"></div>
                 </p>
             </div>
    
-            <div class="conversionbox">
+            <div id="conversionbox">
                 <p>
                 <h2>Celsius to Fahrenheit</h2>
                 <span class="highlight"> Fahrenheit = (Celsius * 1.8) + 32 </span>
 <br>
 <br>
 Enter a temperature in Celsius: <input type="text" id="celsiusInputBox">
-<button type="button" onclick="celsToFahr()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="celsToFahr()">Convert</button>
 <div id="fahrDiv"></div>
                 </p>
             </div>
                     
-            <div class="conversionbox">
+            <div id="conversionbox">
                 <p>
                 <h2>Fahrenheit to Kelvin</h2>
                 <span class="highlight"> Kelvin = ((5/9) * (Fahrenheit - 32)) + 273 </span>
 <br>
 <br>
 Enter a temperature in Fahrenheit: <input type="text" id="fahrInputBox">
-<button type="button" onclick="fahrToKelv()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="fahrToKelv()">Convert</button>
 <div id="kelvinDiv"></div>
                  </p>
             </div>
         
-            <div class="conversionbox">
+            <div id="conversionbox">
                 <p>
                 <h2>Celsius to Kelvin</h2>
                 <span class="highlight"> Kelvin = Celsius + 273.15 </span>
 <br>
 <br>
 Enter a temperature in Celsius: <input type="text" id="celsInputBox">
-<button type="button" onclick="celsToKelv()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="celsToKelv()">Convert</button>
 <div id="kelvinDiv2"></div>
                  </p>
             </div>
-                </center>
-            
+
             </div>
         </div>
     </body>

@@ -34,58 +34,53 @@
     <body>
         <div class="pagecontainer">
             <div class="card-8">
-            
+    <header>
         <p id="backbtn">
             <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
         </p>
                
-            <h1>Distance <i class="fa fa-road" aria-hidden="true"></i></h1>
-        <header>
+                <h1>Distance <i class="fa fa-road" aria-hidden="true"></i></h1>
             <hr>
-        </header>
+    </header>
        
-                <center>
-            <div class="conversionbox">
+            <div id="conversionbox" class="w3-container w3-green">
                 <p>
                 <h2>Inches to Centimeters</h2>
                 <span class="highlight"> Centimeters = Inches * 2.54 </span>
 <br>
 <br>
 Enter a measurement in inches: <input type="text" id="inchInputBox">
-<button type="button" onclick="inchToCm()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="inchToCm()">Convert</button>
 <div id="centimeterDiv"></div>
                 </p>
             </div>
    
-            <div class="conversionbox">
+            <div id="conversionbox" class="w3-container w3-green">
                 <p>
                 <h2>Feet to Meters</h2>
                 <span class="highlight"> Meters = Feet / 3.28 </span>
 <br>
 <br>
 Enter a measurement in feet: <input type="text" id="feetInputBox">
-<button type="button" onclick="feetToMeters()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="feetToMeters()">Convert</button>
 <div id="metersDiv"></div>
                 </p>
             </div>
                     
-            <div class="conversionbox">
+            <div id="conversionbox" class="w3-container w3-green">
                 <p>
                 <h2>Miles to Kilometers</h2>
                 <span class="highlight"> Kilometers = Miles * 1.60934 </span>
 <br>
 <br>
 Enter a measurement in miles: <input type="text" id="milesInputBox">
-<button type="button" onclick="milesToKm()">Convert</button>
+<button type="button" class="w3-button w3-grey" onclick="milesToKm()">Convert</button>
 <div id="kmDiv"></div>
                  </p>
             </div>
-        
-                </center>
-            
         <footer>
            
-            </footer>
+        </footer>
             </div>
         </div>
     </body>

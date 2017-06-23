@@ -68,9 +68,9 @@
                 Kilograms: <input type="text" ng-model="kilograms"><br>
 
                 <br>
-                Pounds to Kg: <h3>{{pounds * 0.453592}}</h3>
+                Pounds to Kg: <h3>{{pounds * 0.453592 | number:2}}</h3>
                 <br>
-                Kg to Pounds: <h3>{{kilograms * 2.20462}}</h3>
+                Kg to Pounds: <h3>{{kilograms * 2.20462 | number:2}}</h3>
                 
             </div>
 

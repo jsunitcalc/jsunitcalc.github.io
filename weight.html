@@ -24,10 +24,13 @@
         <link rel="shortcut icon" type="image/x-icon" href="calculatoricon.png">
         <link rel="apple-touch-icon" href="calculatoricon.png" />
         
-        <!---------------Stylesheets, CDNs, Script Tags--------------->
-        <link rel="stylesheet" type="text/css" href="main.css">
-        
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!---------------Stylesheets, CDNs, Script Tags--------------->
+        
+        <link rel="stylesheet" href="main.css">
+        
+        <script type="text/javascript" src="tempjs.js"></script>
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
@@ -37,33 +40,53 @@
     <body>
         <div class="pagecontainer">
             <div class="card-8">
-        <header>
         <p id="backbtn">
-            <a href="index.html"><button class="w3-button w3-black">Back</button></a>
+            <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
         </p>
-            <h1>Pick a Unit <i class="em em-smile"></i></h1>
+            <h1>Weight <i class="fa fa-balance-scale"></i></h1>
+        <header>
             <hr>
         </header>
-    <main>
-        <a href="tempconvers.html"><button class="w3-button w3-red"><h3>Temperature<br><i class="fa fa-thermometer"></i></h3></button></a>
-        <a href="weight.html"><button class="w3-button w3-blue"><h3>Weight<br><i class="fa fa-balance-scale" aria-hidden="true"></i></h3></button></a>
-        <br>
-        <br>
-        <a href="distanceconv.html"><button class="w3-button w3-green"><h3>Distance<br><i class="fa fa-road" aria-hidden="true"></i></h3></button></a>
-        <a href="unitpick.html"><button class="w3-button w3-yellow"><h3>Shape<br><i class="fa fa-circle" aria-hidden="true"></i></h3></button></a>
-    </main>
-        <footer>
-          
-        </footer>
+                
+            <div class="conversionbox" ng-app="">
+            
+                <h2>Pounds to Kilograms</h2>
+                <span class="highlight">{{equation}}</span>
+<br>
+<br>
+                Enter a weight in pounds:
+                <input type="text" ng-model="pounds">
+                
+                <div id="poundtokg" ng-bind="poundstokg"></div>
+                
+                <div ng-app="" ng-init="quantity=1;cost=5">
+                    <p>Total in dollar: {{ quantity * cost }}</p>
+                </div>
+             
+            </div>
+   
+            <div class="conversionbox">
+                <p>
+                <h2>Pounds to Kg</h2>
+                <span class="highlight"> {equation} </span>
+<br>
+<br>
+                Enter a weight in pounds: 
+                <input type="text" id="fahrenInputBox">
+                
+                <div id="poundtokg">{result}</div>
+                
+                </p>
+            </div>
+            
             </div>
         </div>
     </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script>
     
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        
-        <script type="text/javascript" src="jquery-3.2.0.min.js"> </script>
-        
-        <script type="text/javascript" src="unitnavbar.js"> </script>
-        <script type="text/javascript" src="unitfooter.js"> </script>
-    
+</script>
+
 </html>

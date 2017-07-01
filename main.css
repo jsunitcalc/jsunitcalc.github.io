@@ -40,6 +40,10 @@ main {
     
 }
 
+#weightmain {
+    background-color: #90BDFF;
+}
+
 header {
     background-color: white;
     text-align: center;
@@ -101,6 +105,7 @@ footer {
 
 .highlight {
     background-color: yellow;
+    color: black;
 }
 
 /*-----------------------Lists and Menus------------------*/

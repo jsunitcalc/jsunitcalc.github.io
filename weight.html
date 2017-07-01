@@ -30,8 +30,6 @@
         
         <link rel="stylesheet" href="main.css">
         
-        <script type="text/javascript" src="tempjs.js"></script>
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
@@ -45,9 +43,12 @@
         <div class="pagecontainer">
             <div class="card-8" id="weightmain">
     <header id="weightmain">
-        <p id="backbtn">
+        <div id="backbtn">
             <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
-        </p>
+        </div>
+        <div id="homebtn">
+            <a href="index.html"><button class="w3-button w3-black">Home</button></a>
+        </div>
                 
         <div id="weighttitle">
         <h1>Weight <i class="fa fa-balance-scale"></i></h1>
@@ -59,7 +60,7 @@
                 
             <div id="conversionbox" class="w3-container w3-blue">
             
-                <h3>Pounds to Kilograms</h3>
+                <h3><u>Pounds to Kilograms</u></h3>
                 <span class="highlight">{{ equation }}</span>
                 <br>
 
@@ -70,7 +71,7 @@
                 
                 <hr>
                 
-                <h3>Kilograms to Pounds</h3>
+                <h3><u>Kilograms to Pounds</u></h3>
                 <span class="highlight">{{ equation2 }}</span><br><br>
                 Kilograms: <input type="text" ng-model="kilograms"><br><br>
                 Kg to Pounds: <h3>{{kilograms * 2.20462 | number:2}}</h3>
@@ -79,7 +80,7 @@
                 
             <div id="conversionbox" class="w3-container w3-blue">
             
-                <h3>Ounces to Grams</h3>
+                <h3><u>Ounces to Grams</u></h3>
                 <span class="highlight">{{ ounceequation }}</span>
                 <br>
 
@@ -91,7 +92,7 @@
                 Ounces to Grams: <h3>{{ounces * 28.3495 | number:2}}</h3>
                 <hr>
                 
-                <h3>Grams to Ounces</h3>
+                <h3><u>Grams to Ounces</u></h3>
                 <span class="highlight">{{ gramequation }}</span>
 <br>
 <br>

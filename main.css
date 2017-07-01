@@ -166,6 +166,12 @@ li a:active {
     padding: .5em;
 }
 
+#homebtn {
+    text-align: right;
+    margin: .5em;
+    padding: .5em;
+}
+
 nav li {
 	flex: 1 0 8em;
 }

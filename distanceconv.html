@@ -74,24 +74,20 @@
                 
             <div id="conversionbox" class="w3-container w3-green">
             
-                <h3><u>Ounces to Grams</u></h3>
-                <span class="highlight">{{ ounceequation }}</span>
+                <h3><u>Feet to Meters</u></h3>
+                <span class="highlight">{{ metersequation }}</span>
+                <br><br>
+                Feet: <input type="text" ng-model="feet"><br>
                 <br>
-
-                <br>
-                
-                Ounces: <input type="text" ng-model="ounces"><br>
-            
-                <br>
-                Ounces to Grams: <h3>{{ounces * 28.3495 | number:2}}</h3>
+                Feet to Meters: <h3>{{feet * 3.28084 | number:2}}</h3>
                 <hr>
                 
-                <h3><u>Grams to Ounces</u></h3>
-                <span class="highlight">{{ gramequation }}</span>
+                <h3><u>Meters to Feet</u></h3>
+                <span class="highlight">{{ feetequation }}</span>
 <br>
 <br>
-                Grams: <input type="text" ng-model="grams"><br><br>
-                Grams to Ounces: <h3>{{grams * 0.035274 | number:2}}</h3>
+                Meters: <input type="text" ng-model="meters"><br><br>
+                Meters to Feet: <h3>{{meters * 0.3048 | number:2}}</h3>
                 
             </div>
         </main>
@@ -110,8 +106,8 @@ app.controller('myCtrl', function($scope) {
     
     $scope.feet= "";
     $scope.meters= "";
-    $scope.feetequation= "1 oz = 28.3495 grams";
-    $scope.metersequation= "Meters = Feet / 3.28";
+    $scope.feetequation= "Ft = Meters * 0.3048";
+    $scope.metersequation= "Meters = Ft * 3.28084";
 });
 </script>
     </body>

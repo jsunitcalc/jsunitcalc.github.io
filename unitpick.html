@@ -33,6 +33,10 @@
         
         <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+        
     </head>
     <body>
         <div class="pagecontainer">
@@ -42,15 +46,24 @@
             <a href="index.html"><button class="w3-button w3-black">Back</button></a>
         </p>
             <h1>Pick a Unit <i class="em em-smile"></i></h1>
-            <hr>
-        </header>
-    <main>
-        <a href="tempconvers.html"><button class="w3-button w3-red"><h3>Temperature<br><i class="fa fa-thermometer"></i></h3></button></a>
+            
+            <a href="tempconvers.html"><button class="w3-button w3-red"><h3>Temperature<br><i class="fa fa-thermometer"></i></h3></button></a>
         <a href="weight.html"><button class="w3-button w3-blue"><h3>Weight<br><i class="fa fa-balance-scale" aria-hidden="true"></i></h3></button></a>
         <br>
         <br>
         <a href="distanceconv.html"><button class="w3-button w3-green"><h3>Distance<br><i class="fa fa-road" aria-hidden="true"></i></h3></button></a>
         <a href="unitpick.html"><button class="w3-button w3-yellow"><h3>Shape<br><i class="fa fa-circle" aria-hidden="true"></i></h3></button></a>
+            
+            <hr>
+        </header>
+    <main ng-app="myApp">
+
+
+    <a href="#/temperature"><button class="w3-button w3-red"><h3>Temperature<br><i class="fa fa-thermometer"></i></h3></button></a>
+    <a href="#/weigh"><button class="w3-button w3-blue"><h3>Weight<br><i class="fa fa-balance-scale" aria-hidden="true"></i></h3></button></a>
+    <a href="#/about">About</a>
+
+    <div ng-view></div>
     </main>
         <footer>
           
@@ -59,11 +72,61 @@
         </div>
     </body>
     
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
-        <script type="text/javascript" src="jquery-3.2.0.min.js"> </script>
-        
-        <script type="text/javascript" src="unitnavbar.js"> </script>
-        <script type="text/javascript" src="unitfooter.js"> </script>
+        <script>
+            var app = angular.module('myApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+  $routeProvider
+
+  .when('/', {
+    templateUrl : 'temp.html',
+    controller  : 'TempController'
+  })
+
+  .when('/weigh', {
+    templateUrl : 'weigh.html',
+    controller  : 'WeightController'
+  })
+
+  .when('/about', {
+    templateUrl : 'about.html',
+    controller  : 'AboutController'
+  })
+
+  .otherwise({redirectTo: '/'});
+});
+      </script>
+      
+      <script>
+            
+app.controller('TempController', function($scope) {
+  $scope.message = 'Hello Temp';
+});
+
+app.controller('WeightController', function($scope) {
+  $scope.message = 'Hello from BlogController';
+});
+
+app.controller('AboutController', function($scope) {
+  $scope.message = 'Hello from AboutController';
+});
+      </script>
+    
+    <script>
+var app = angular.module('poundstokgApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.pounds= "";
+    $scope.kilograms= "";
+    $scope.equation= "1 lb = 0.453592 kg";
+    $scope.equation2= "1 kg = 2.20462 lb";
+    
+    $scope.ounces= "";
+    $scope.grams= "";
+    $scope.ounceequation= "1 oz = 28.3495 grams";
+    $scope.gramequation= "1 gram = 0.035274 oz";
+});
+</script>
     
 </html>

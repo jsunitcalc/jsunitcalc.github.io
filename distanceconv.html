@@ -79,7 +79,7 @@
                 <br><br>
                 Feet: <input type="text" ng-model="feet"><br>
                 <br>
-                Feet to Meters: <h3>{{feet * 3.28084 | number:2}}</h3>
+                Feet to Meters: <h3>{{feet * 0.3048 | number:2}}</h3>
                 <hr>
                 
                 <h3><u>Meters to Feet</u></h3>
@@ -87,7 +87,26 @@
 <br>
 <br>
                 Meters: <input type="text" ng-model="meters"><br><br>
-                Meters to Feet: <h3>{{meters * 0.3048 | number:2}}</h3>
+                Meters to Feet: <h3>{{meters * 3.28084 | number:2}}</h3>
+                
+            </div>
+            
+            <div id="conversionbox" class="w3-container w3-green">
+            
+                <h3><u>Miles to Km</u></h3>
+                <span class="highlight">{{ kmToMiles }}</span>
+                <br><br>
+                Miles: <input type="text" ng-model="miles"><br>
+                <br>
+                Miles to Km: <h3>{{miles * 1.60934 | number:2}}</h3>
+                <hr>
+                
+                <h3><u>Km to Miles</u></h3>
+                <span class="highlight">{{ milesToKm }}</span>
+<br>
+<br>
+                Kilometers: <input type="text" ng-model="km"><br><br>
+                Km to Miles: <h3>{{km * 0.621371 | number:2}}</h3>
                 
             </div>
         </main>
@@ -108,6 +127,11 @@ app.controller('myCtrl', function($scope) {
     $scope.meters= "";
     $scope.feetequation= "Ft = Meters * 0.3048";
     $scope.metersequation= "Meters = Ft * 3.28084";
+    
+    $scope.km= "";
+    $scope.miles= "";
+    $scope.kmToMiles= "Km = Miles * 0.621371";
+    $scope.milesToKm= "Miles = Km * 1.60934";
 });
 </script>
     </body>

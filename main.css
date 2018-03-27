@@ -1,5 +1,5 @@
 /*----------------JavaScript Test App--Unit Conversion-----------
-------------------Copyright 2017 Tyler Tucker-------------------*/
+------------------Copyright 2018 Tyler Tucker-------------------*/
 
 /*------------------Media Queries-------------------*/
 @media screen and (max-device-width: 480px) {
@@ -41,7 +41,7 @@ main {
 }
 
 #weightmain {
-    background-color: #90BDFF;
+    background-color: white;
 }
 
 #weighttitle {

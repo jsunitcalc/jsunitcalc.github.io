@@ -48,3 +48,20 @@
                 
             </div>
     </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+
+<script>
+var app = angular.module('poundstokgApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.pounds= "";
+    $scope.kilograms= "";
+    $scope.equation= "1 lb = 0.453592 kg";
+    $scope.equation2= "1 kg = 2.20462 lb";
+    
+    $scope.ounces= "";
+    $scope.grams= "";
+    $scope.ounceequation= "1 oz = 28.3495 grams";
+    $scope.gramequation= "1 gram = 0.035274 oz";
+});
+</script>
